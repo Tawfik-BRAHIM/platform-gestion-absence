@@ -1,0 +1,64 @@
+<app-acc-enseignat></app-acc-enseignat>
+<div class="container">
+  <h1 class="text-center mb-4">Ajouter une absence</h1>
+  <form>
+    <div class="form-floating mb-3">
+      <select class="form-select form-select-lg mb-3" id="groupe" name="groupe">
+        <option value="A">Groupe A</option>
+        <option value="B">Groupe B</option>
+        <option value="C">Groupe C</option>
+        <option value="D">Groupe D</option>
+        <option value="E">Groupe E</option>
+      </select>
+      <label for="groupe" class="form-label text-muted">Nom groupe:</label>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg">Rechercher</button>
+    </div>
+  </form>
+  <!-- Affichage des résultats -->
+  <div class="mt-4">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Matière</th>
+          <th>Nombre d'absences</th>
+          <th>Ajouter une absence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rihem</td>
+          <td>Smiri</td>
+          <td>Prog</td>
+          <td>8</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#ajoutAbsenceModal">
+              Ajouter
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Modal pour l'ajout d'une absence -->
+<div class="modal fade" id="ajoutAbsenceModal" tabindex="-1" aria-labelledby="ajoutAbsenceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ajoutAbsenceModalLabel">Ajouter une absence</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Êtes-vous sûr de vouloir ajouter une absence pour l'étudiant sélectionné ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>

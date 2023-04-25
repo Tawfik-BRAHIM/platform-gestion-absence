@@ -1,0 +1,29 @@
+<app-acc-admin></app-acc-admin>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Liste des étudiants :</h2>
+      <button class="btn btn-success mb-3">Ajouter un étudiant</button>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>CIN</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etudiant of etudiants">
+            <td>{{etudiant.nom}}</td>
+            <td>{{etudiant.prenom}}</td>
+            <td>{{etudiant.email}}</td>
+            <td>{{etudiant.cin}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

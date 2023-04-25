@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Espace enseignat</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/AbsParGrp">Absence par groupe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Ajoutabs">Ajouter une absence</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Supabs">Supprimer une absence</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/matens">Matiere enseigné</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/grpens">Groupe enseigné</a>
+        </li>
+        </ul>
+
+
+      <form class="d-flex">
+        <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="">Déconnexion</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+

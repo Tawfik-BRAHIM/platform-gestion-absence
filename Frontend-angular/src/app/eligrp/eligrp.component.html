@@ -1,0 +1,40 @@
+<app-acc-admin></app-acc-admin>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Choisir un groupe :</h2>
+      <div class="form-group">
+        <select class="form-control" >
+          
+          <option value="GROUPE A">Groupe A</option>
+          <option value="GROUPE B">Groupe B</option>
+          <option value="GROUPE C">Groupe C</option>
+          <option value="GROUPE D">Groupe D</option>
+          <option value="GROUPE E">Groupe E</option>
+        </select>
+      </div>
+      <h2>Liste des étudiants :</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>CIN</th>
+            <th>Etat d'élimination</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etudiant of filtrerEtudiants()">
+            <td>{{etudiant.nom}}</td>
+            <td>{{etudiant.prenom}}</td>
+            <td>{{etudiant.email}}</td>
+            <td>{{etudiant.cin}}</td>
+            <td>{{etudiant.elimine ? 'Eliminé' : 'Non éliminé'}}</td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+
+            </div>
+          </div>

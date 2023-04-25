@@ -1,0 +1,32 @@
+<app-acc-admin></app-acc-admin>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Liste des étudiants :</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>CIN</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etudiant of etudiants">
+            <td>{{etudiant.nom}}</td>
+            <td>{{etudiant.prenom}}</td>
+            <td>{{etudiant.email}}</td>
+            <td>{{etudiant.cin}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="supprimerEtudiant(etudiant)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+<app-acc-enseignat></app-acc-enseignat>
+<div class="container">
+  <h1 class="text-center mb-5">Nombre d'absences par groupe</h1>
+  <form>
+    <div class="form-floating mb-3">
+      <select class="form-select form-select-lg mb-3" id="groupe" name="groupe">
+        <option value="A">Groupe A</option>
+        <option value="B">Groupe B</option>
+        <option value="C">Groupe C</option>
+        <option value="D">Groupe D</option>
+        <option value="E">Groupe E</option>
+      </select>
+      <label for="groupe" class="form-label text-muted">Nom groupe:</label>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg">Rechercher</button>
+    </div>
+  </form>
+  <!-- Affichage des résultats -->
+  <div class="mt-4">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Matière</th>
+          <th>Nombre d'absences</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rihem</td>
+          <td>Smiri</td>
+          <td>Prog</td>
+          <td>8</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

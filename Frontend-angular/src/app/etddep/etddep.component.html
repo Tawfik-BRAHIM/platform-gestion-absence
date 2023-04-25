@@ -1,0 +1,50 @@
+<app-acc-admin></app-acc-admin>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card my-4">
+        <div class="card-header">
+          <h2 class="card-title">Choisir un département :</h2>
+        </div>
+        <div class="card-body">
+          <select class="form-select" >
+            <option value="informatique">Informatique</option>
+            <option value="genieIndustriel">Génie industriel</option>
+            <option value="electrique">Électrique</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="card my-4">
+        <div class="card-header">
+          <h2 class="card-title">{{selectedDepartment | titlecase}}</h2>
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>CIN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let etudiant of etudiants">
+                <ng-container *ngIf="etudiant.departement === selectedDepartment">
+                  <td>{{etudiant.nom}}</td>
+                  <td>{{etudiant.prenom}}</td>
+                  <td>{{etudiant.email}}</td>
+                  <td>{{etudiant.cin}}</td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
